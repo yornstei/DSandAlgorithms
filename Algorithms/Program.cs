@@ -9,12 +9,12 @@ namespace Algorithms
         {
             Console.WriteLine("Hello World!");
             Stopwatch stopwatch = new Stopwatch();
-            //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            //int count = Recursion.CountOfTxtFilesInDir(path);
-            //Console.WriteLine($@"Txt file count in dir {path} = {count}");
+            int count = Recursion.CountOfTxtFilesInDir(path);
+            Console.WriteLine($@"Txt file count in dir {path} = {count}");
 
-            //Recursion.PrintTxtFilesInDir(@"C:\Users\yornstein\Desktop");
+            Recursion.PrintTxtFilesInDir(@"C:\Users\yornstein\Desktop");
 
             stopwatch.Start();
             Console.WriteLine($"Fib(5) = {Memoization.FibRecursion(5)}");
