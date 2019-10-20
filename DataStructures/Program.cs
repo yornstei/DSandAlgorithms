@@ -6,6 +6,49 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            LinkedList linkedList = new LinkedList(1);
+            linkedList.PrindList();
+            linkedList.Delete();
+            linkedList.Append(2);
+            linkedList.PrindList();
+            linkedList.Append(4);
+            linkedList.Append(10);
+            linkedList.PrindList();
+            linkedList.Delete();
+            linkedList.PrindList();
+
+            linkedList.Clear();
+            linkedList.PrindList();
+
+            linkedList.Append(2);
+            linkedList.Append(4);
+            linkedList.Append(10);
+            linkedList.PrindList();
+            linkedList.Delete(4);
+            linkedList.PrindList();
+
+            linkedList.Clear();
+            linkedList.PrindList();
+
+            linkedList.Append(2);
+            linkedList.Append(4);
+            linkedList.Append(10);
+            linkedList.PrindList();
+            linkedList.Delete(2);
+            linkedList.PrindList();
+
+            linkedList.Clear();
+            linkedList.PrindList();
+
+            linkedList.Append(2);
+            linkedList.Append(4);
+            linkedList.Append(10);
+            linkedList.PrindList();
+            linkedList.Delete(10);
+            linkedList.PrindList();
+
+            Console.ReadKey();
+
             Console.WriteLine("Hello World!");
 
             HeapMin heapMin = new HeapMin();
