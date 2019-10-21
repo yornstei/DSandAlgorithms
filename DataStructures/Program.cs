@@ -6,6 +6,34 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
+            //FIFO
+            Queue queue = new Queue();
+            Console.WriteLine(queue.IsEmpty());
+            queue.Add(1);
+            queue.Add(3);
+            queue.Print();
+            Console.WriteLine(queue.Peek());
+            queue.Add(5);
+            queue.Add(2);
+            queue.Print();
+            queue.Remove();
+            queue.Print();
+            
+            //LIFO
+            Stack stack = new Stack();
+            Console.WriteLine(stack.IsEmpty());
+            stack.Push(1);
+            stack.Push(3);
+            stack.Print();
+            Console.WriteLine(stack.Peek());
+            stack.Push(5);
+            stack.Push(2);
+            stack.Print();
+            stack.Pop();
+            stack.Print();
+            
+            Console.ReadKey();
+
             LinkedList linkedList = new LinkedList(1);
             linkedList.PrindList();
             linkedList.Delete();

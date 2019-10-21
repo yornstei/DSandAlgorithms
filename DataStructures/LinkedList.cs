@@ -6,15 +6,16 @@ namespace DataStructures
 {
     class Node
     {
-        public int id;
+        public int data;
         public Node next;
 
-        public Node(int id)
+        public Node(int data)
         {
-            this.id = id;
+            this.data = data;
         }
     }
 
+    //todo doubly linkedlists
     class LinkedList
     {
         Node head;
@@ -68,7 +69,7 @@ namespace DataStructures
         public bool Delete(int x)
         {
             if (head == null) return false;
-            else if (head.id == x)
+            else if (head.data == x)
             {
                 head = head.next;
                 return true;
@@ -77,7 +78,7 @@ namespace DataStructures
             Node current = head;
             while (current.next != null)
             {
-                if (current.next.id == x)
+                if (current.next.data == x)
                 {
                     current.next = current.next.next;
                     return true;
@@ -96,10 +97,10 @@ namespace DataStructures
             Node temp = head;
             while (temp != null)
             {
-                Console.Write(temp.id);
+                Console.Write(temp.data);
                 temp = temp.next;
             }
-            Console.WriteLine("");
+            Console.WriteLine();
         }
     }
 }
