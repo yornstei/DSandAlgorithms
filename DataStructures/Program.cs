@@ -18,7 +18,7 @@ namespace DataStructures
             queue.Print();
             queue.Remove();
             queue.Print();
-            
+
             //LIFO
             Stack stack = new Stack();
             Console.WriteLine(stack.IsEmpty());
@@ -31,7 +31,7 @@ namespace DataStructures
             stack.Print();
             stack.Pop();
             stack.Print();
-            
+
             Console.ReadKey();
 
             LinkedList linkedList = new LinkedList(1);
@@ -96,6 +96,18 @@ namespace DataStructures
             heapMin.Pool();
             min = heapMin.Peek();
             Console.WriteLine(min); // should == 4
+
+
+            Console.ReadKey();
+
+            BSTree bSTree = new BSTree(10);
+            bSTree.Insert(15);
+            bSTree.Insert(5);
+            bSTree.PrintInOrder();
+            bSTree.Insert(8);
+            bSTree.PrintInOrder();
+            Console.WriteLine(bSTree.Contains(8));
+            Console.WriteLine(bSTree.Contains(18));
 
 
             Console.ReadKey();
