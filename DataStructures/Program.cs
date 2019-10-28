@@ -98,17 +98,55 @@ namespace DataStructures
             Console.WriteLine(min); // should == 4
 
 
-            Console.ReadKey();
+            //Console.ReadKey();
 
-            BSTree bSTree = new BSTree(10);
-            bSTree.Insert(15);
-            bSTree.Insert(5);
-            bSTree.PrintInOrder();
-            bSTree.Insert(8);
-            bSTree.PrintInOrder();
-            Console.WriteLine(bSTree.Contains(8));
-            Console.WriteLine(bSTree.Contains(18));
+            //BSTree bSTree = new BSTree(10);
+            //bSTree.Insert(15);
+            //bSTree.Insert(5);
+            //bSTree.PrintInOrder();
+            //bSTree.Insert(8);
+            //bSTree.PrintInOrder();
+            //Console.WriteLine(bSTree.Contains(8));
+            //Console.WriteLine(bSTree.Contains(18));
 
+
+            //Console.ReadKey();
+
+            string[] keys = {"the", "a", "there", "answer",
+                        "any", "by", "bye", "their"};
+
+            string[] output = { "Not present in trie", "Present in trie" };
+
+            Trie trie = new Trie();
+
+            // Construct trie 
+            for (int i = 0; i < keys.Length; i++)
+                trie.Insert(keys[i]);
+
+            // Search for different keys 
+            if (trie.Contains("the") == true)
+                Console.WriteLine("the --- " + output[1]);
+            else Console.WriteLine("the --- " + output[0]);
+
+            if (trie.Contains("these") == true)
+                Console.WriteLine("these --- " + output[1]);
+            else Console.WriteLine("these --- " + output[0]);
+
+            if (trie.Contains("their") == true)
+                Console.WriteLine("their --- " + output[1]);
+            else Console.WriteLine("their --- " + output[0]);
+
+            if (trie.Contains("thaw") == true)
+                Console.WriteLine("thaw --- " + output[1]);
+            else Console.WriteLine("thaw --- " + output[0]);
+
+            if (trie.Contains("thei") == true)
+                Console.WriteLine("thei --- " + output[1]);
+            else Console.WriteLine("thei --- " + output[0]);
+
+            if (trie.Contains("thei", true) == true)
+                Console.WriteLine("thei (full word search) --- " + output[1]);
+            else Console.WriteLine("thei (full word search) --- " + output[0]);
 
             Console.ReadKey();
         }
